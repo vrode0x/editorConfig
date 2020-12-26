@@ -8,6 +8,7 @@ uses
   Classes, SysUtils, EditorConfigTypes;
 
 type
+  {$IF FPC_FULLVERSION < 030000}RawByteString = string;{$ENDIF}
   TLookUpResult = record
     editorConfigFile: string;
     filename_pattern: string;
